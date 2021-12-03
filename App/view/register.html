@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>My Login Page &mdash; Bootstrap 4 Login Page Snippet</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../assets/css/my-login.css">
+	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/App/assets/css/style.css">
+</head>
+
+<body class="my-login-page">
+	<!-- Navigation-->
+	<nav class="navbar navbar-expand-lg navbar-light shadow-sm" id="mainNav">
+		<div class="container px-5">
+			<a class="navbar-brand fw-bold" href="#page-top">YouCode</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="bi-list"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+					<li class="nav-item"><a class="nav-link me-lg-3" href="#features">test</a></li>
+					<li class="nav-item"><a class="nav-link me-lg-3" href="#download">test</a></li>
+				</ul>
+				<button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
+					data-bs-target="#feedbackModal">
+					<span class="d-flex align-items-center">
+
+						<span class="small">Logout</span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</nav>
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="../assets/img/logo.jpg" alt="bootstrap 4 login page">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Register</h4>
+							<form class="row my-login-validation register" novalidate="">
+								<div class="col-md-6">
+									<label for="firstName">First Name</label>
+									<input id="firstName" type="text" class="form-control" name="fName" required
+										autofocus>
+									<div class="invalid-feedback">
+										What's your First Name?
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label for="lastName">lastName</label>
+									<input id="lastName" type="lastName" class="form-control" name="lName" required
+										data-eye>
+									<div class="invalid-feedback">
+										last Name is required
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="email">E-Mail Address</label>
+									<input id="email" type="email" class="form-control" name="email" required>
+									<div class="invalid-feedback">
+										Your email is invalid
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<label for="age">Age</label>
+									<input id="age" type="age" class="form-control" name="age" required data-eye>
+									<div class="invalid-feedback">
+										age is required
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label for="CIN">CIN</label>
+									<input id="CIN" type="CIN" class="form-control" name="cin" required data-eye>
+									<div class="invalid-feedback">
+										CIN is required
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="custom-checkbox custom-control">
+										<input type="checkbox" name="agree" id="agree" class="custom-control-input"
+											required="">
+										<label for="agree" class="custom-control-label">I agree to the <a href="#">Terms
+												and Conditions</a></label>
+										<div class="invalid-feedback">
+											You must agree with our Terms and Conditions
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group m-0">
+									<button type="submit" class="btn btn-primary btn-block">
+										Register
+									</button>
+								</div>
+								<div class="mt-4 text-center">
+									Already have an account? <a href="login.html">Login</a>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer-->
+	<footer class="bg-black text-center py-5">
+		<div class="container px-5">
+			<div class="text-white-50 small">
+				<div class="mb-2">&copy; YouCode 2021. All Rights Reserved.</div>
+				<a href="#!">Privacy</a>
+				<span class="mx-1">&middot;</span>
+				<a href="#!">Terms</a>
+				<span class="mx-1">&middot;</span>
+				<a href="#!">FAQ</a>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+
+<script src="/node_modules/axios/dist/axios.min.js"></script>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<script type="module" src="/App/assets/js/auth.js"></script>
+</body>
+
+</html>

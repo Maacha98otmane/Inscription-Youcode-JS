@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test En ligne</title>
+    <link rel="stylesheet" href="/App/assets/css/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <h2>Test En ligne</h2>
+        </div>
+        <div class="main">
+            <div class="final">
+                <h3>You answered all of the questions!</h3>
+                <p>Score: </p>
+                <p class="score"></p>
+                <button id="again" style="display: none;" class="submit">Next</button>
+                <button id="fermer" style="display: none;" class="submit">Fermer</button>
+            </div>
+            <div class="quiz">
+                <div class="count">
+                    <p class="current">0</p>
+                    <p style="margin-left:40px"> / </p>
+                    <p class="total"></p>
+                </div>
+                <h3 id="question"></h3>
+                <label id="a1" class="container">
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label id="a2" class="container">
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label id="a3" class="container">
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label id="a4" class="container">
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <button id="next" class="submit">Submit</button>
+            </div>
+            <div class="settings">
+                <button id="start" class="submit">Start</button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="../assets/js/index.js"></script>
+</body>
+
+</html>
