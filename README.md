@@ -40,3 +40,5 @@ Use this command to install the necessary dependencies and Enjoy
 ```
 
 ## Simulation
+
+![Animationsd](https://user-images.githubusercontent.com/63611548/144918744-daba8b72-e4cc-4319-9e2a-92085647eb52.gif)
