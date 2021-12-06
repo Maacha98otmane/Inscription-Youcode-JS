@@ -1,17 +1,13 @@
 import User from './User.js';
 
 export default class Candidate extends User {
-    constructor(cin, age, lName, fName, email, Uid, password) {
-        super(lName, fName, email, Uid, password)
-        // this.lName = lName
+    constructor(cin, age, lName, fName, email, Uid, password, passTest) {
+        super(lName, fName, email, Uid, password , passTest)
         this.cin = cin;
         this.age = age
-        this.lName = lName
     }
 
     async register() {
-
-
         /* check email if alredy exist */
         var emailExist = false
 
@@ -47,7 +43,8 @@ export default class Candidate extends User {
                 email: this.email,
                 Uid: this.Uid,
                 password: this.password,
-                role: this.role
+                role: this.role,
+                passTest: this.passTest
             }
             /* ask user if really want to register */
             Swal.fire({
@@ -86,5 +83,26 @@ export default class Candidate extends User {
                 }
             })
         }
+    }
+    async getId (Uid , password) {
+        let id;
+        await axios.get("http://localhost:3000/users/")
+        .then((res) => {
+            res.data.forEach(user => {
+                if (user.Uid == Uid && user.password == password) {
+                    id = user.id
+                }
+            });
+
+        })
+        
+        return id
+    }
+
+    async changeAttrPassTest (id) {
+        await axios.patch("http://localhost:3000/users/"+id ,{ passTest: true})
+        .then((res)=>{
+            
+        })
     }
 }

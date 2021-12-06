@@ -11,6 +11,7 @@ class Quiz {
 
     this.totalAmount = amount;
     this.answeredAmount = 0;
+
     this.questions = this.setQuestions(questions);
 
     this.nextButton.addEventListener('click', this.nextQuestion.bind(this));
@@ -29,6 +30,7 @@ class Quiz {
 
   nextQuestion() {
     const checkedElement = this.questions[this.answeredAmount].answerElements.filter(el => el.firstChild.checked);
+    console.log(checkedElement);
     if (checkedElement.length === 0) {
       alert('You need to select an answer');
     } else {

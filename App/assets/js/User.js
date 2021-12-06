@@ -6,6 +6,7 @@ export default class User {
         this.Uid = Uid;
         this.password = password;
         this.role = "candidate";
+        this.passTest = false;
     }
 
     async login() {
@@ -47,6 +48,21 @@ export default class User {
 
     logout() {
         sessionStorage.clear();
+    }
+
+    async getUserPassTest () {
+        let users = []
+        await axios.get("http://localhost:3000/users/")
+        .then((res) => {
+            res.data.forEach((user) => {
+                if(user.passTest == true){
+
+                    users.push(user)
+                }
+            })
+
+        })
+        return users ;
     }
 
 }

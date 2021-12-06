@@ -1,15 +1,18 @@
 :root {
-    --primary-color: #5D737E;
-    --secondary-color: #D6F8D6;
-    --tertiary-color: #7FC6A4;
+    --primary-color: #0b5ed7;
+    --secondary-color: #ffffff;
+    --tertiary-color: #ffffff;
     --quaternary-color: #55505C;
-    --hover-color: #4e616b;
+    --hover-color: #00a6ff;
     --shadow-color:rgba(57, 127, 93, 0.4);
     --font-style: 'Questrial';
   }
-  
+  span{
+    border: 2px solid black;
+  }
   body {
     font-family: var(--font-style), 'Ranchers', cursive;
+    background-image: url(../img/hero-bg.png);
     background-color: var(--secondary-color);
     width: 100vw;
     height: 100vh;
